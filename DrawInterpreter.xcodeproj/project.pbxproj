@@ -14,6 +14,8 @@
 		3E5771591A2751C20088953D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E5771581A2751C20088953D /* Images.xcassets */; };
 		3E57715C1A2751C20088953D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E57715A1A2751C20088953D /* LaunchScreen.xib */; };
 		3E5771681A2751C20088953D /* DrawInterpreterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5771671A2751C20088953D /* DrawInterpreterTests.m */; };
+		3E5771731A2751F50088953D /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5771721A2751F50088953D /* TestView.m */; };
+		3E5771761A275C9F0088953D /* LINScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5771751A275C9F0088953D /* LINScanner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		3E5771611A2751C20088953D /* DrawInterpreterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawInterpreterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E5771661A2751C20088953D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E5771671A2751C20088953D /* DrawInterpreterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawInterpreterTests.m; sourceTree = "<group>"; };
+		3E5771711A2751F50088953D /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		3E5771721A2751F50088953D /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		3E5771741A275C9F0088953D /* LINScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINScanner.h; sourceTree = "<group>"; };
+		3E5771751A275C9F0088953D /* LINScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINScanner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +87,14 @@
 		3E57714A1A2751C20088953D /* DrawInterpreter */ = {
 			isa = PBXGroup;
 			children = (
+				3E5771741A275C9F0088953D /* LINScanner.h */,
+				3E5771751A275C9F0088953D /* LINScanner.m */,
 				3E57714F1A2751C20088953D /* AppDelegate.h */,
 				3E5771501A2751C20088953D /* AppDelegate.m */,
 				3E5771521A2751C20088953D /* ViewController.h */,
 				3E5771531A2751C20088953D /* ViewController.m */,
+				3E5771711A2751F50088953D /* TestView.h */,
+				3E5771721A2751F50088953D /* TestView.m */,
 				3E5771551A2751C20088953D /* Main.storyboard */,
 				3E5771581A2751C20088953D /* Images.xcassets */,
 				3E57715A1A2751C20088953D /* LaunchScreen.xib */,
@@ -219,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5771731A2751F50088953D /* TestView.m in Sources */,
 				3E5771541A2751C20088953D /* ViewController.m in Sources */,
+				3E5771761A275C9F0088953D /* LINScanner.m in Sources */,
 				3E5771511A2751C20088953D /* AppDelegate.m in Sources */,
 				3E57714E1A2751C20088953D /* main.m in Sources */,
 			);
