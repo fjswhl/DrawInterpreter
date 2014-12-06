@@ -16,6 +16,7 @@
 		3E5771681A2751C20088953D /* DrawInterpreterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5771671A2751C20088953D /* DrawInterpreterTests.m */; };
 		3E5771731A2751F50088953D /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5771721A2751F50088953D /* TestView.m */; };
 		3E5771761A275C9F0088953D /* LINScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5771751A275C9F0088953D /* LINScanner.m */; };
+		3E67859A1A2D785B0088DEB1 /* LINParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6785991A2D785B0088DEB1 /* LINParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		3E5771721A2751F50088953D /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		3E5771741A275C9F0088953D /* LINScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINScanner.h; sourceTree = "<group>"; };
 		3E5771751A275C9F0088953D /* LINScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINScanner.m; sourceTree = "<group>"; };
+		3E6785981A2D785B0088DEB1 /* LINParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINParser.h; sourceTree = "<group>"; };
+		3E6785991A2D785B0088DEB1 /* LINParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 			children = (
 				3E5771741A275C9F0088953D /* LINScanner.h */,
 				3E5771751A275C9F0088953D /* LINScanner.m */,
+				3E6785981A2D785B0088DEB1 /* LINParser.h */,
+				3E6785991A2D785B0088DEB1 /* LINParser.m */,
 				3E57714F1A2751C20088953D /* AppDelegate.h */,
 				3E5771501A2751C20088953D /* AppDelegate.m */,
 				3E5771521A2751C20088953D /* ViewController.h */,
@@ -233,6 +238,7 @@
 				3E5771541A2751C20088953D /* ViewController.m in Sources */,
 				3E5771761A275C9F0088953D /* LINScanner.m in Sources */,
 				3E5771511A2751C20088953D /* AppDelegate.m in Sources */,
+				3E67859A1A2D785B0088DEB1 /* LINParser.m in Sources */,
 				3E57714E1A2751C20088953D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +432,7 @@
 				3E57716D1A2751C20088953D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E57716E1A2751C20088953D /* Build configuration list for PBXNativeTarget "DrawInterpreterTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +441,7 @@
 				3E5771701A2751C20088953D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
