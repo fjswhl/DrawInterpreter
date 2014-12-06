@@ -8,9 +8,6 @@
 
 #import "LINParser.h"
 
-
-
-
 @implementation ExprNode
 
 @end
@@ -82,13 +79,15 @@
 
 - (void)syntaxError:(NSInteger)code{
     if (code == 1){
-        @throw [NSError errorWithDomain:@"fetchToken failed"
-                                   code:code
-                               userInfo:nil];
+        [self.delegate parserDidFailedWithString:@"fetchToken failed"];
+//        @throw [NSError errorWithDomain:@"fetchToken failed"
+//                                   code:code
+//                               userInfo:nil];
     } else {
-        @throw [NSError errorWithDomain:@"not expected token"
-                                   code:code
-                               userInfo:nil];
+        [self.delegate parserDidFailedWithString:@"not expected token"];
+//        @throw [NSError errorWithDomain:@"not expected token"
+//                                   code:code
+//                               userInfo:nil];
     }
     
 }
@@ -189,31 +188,26 @@
     [self matchToken:COMMA];
     y = [self expression];
     [self matchToken:R_BRACKET];
-    //TODO   绘图
+    //TODO   绘图  done
     
-//    UIGraphicsBeginImageContext(self.frame.size);
-//    [[UIColor redColor] set];
-//    CGContextRef ctx = UIGraphicsGetCurrentContext();
-//    CGContextMoveToPoint(ctx, _x, _y);
     _t = start;
     NSMutableArray *points = [NSMutableArray array];
     while (_t < ending)
     {
-        //CGPathAddLineToPoint(path, nil, t, pow(t, 2));
-        //CGContextTranslateCTM(ctx, 2, 1);
-        CGFloat xPoint = ([self getExprValue:x] * _data.scale.dx + _data.origin.x);
-        CGFloat yPoint = ([self getExprValue:y] * _data.scale.dy + _data.origin.y);
-//        CGContextFillRect(ctx, CGRectMake(xPoint - 1, yPoint -1, 2, 2));
+        CGFloat xPoint = [self getExprValue:x] * _data.scale.dx;
+        CGFloat yPoint = [self getExprValue:y] * _data.scale.dy;
+        CGFloat tx = xPoint;
+        CGFloat ty = yPoint;
+        xPoint = tx * cos(_data.rotAngel) + ty * sin(_data.rotAngel);
+        yPoint = ty * cos(_data.rotAngel) - tx * sin(_data.rotAngel);
+        
+         xPoint = (xPoint + _data.origin.x);
+         yPoint = (yPoint + _data.origin.y);
+
         [points addObject:[NSValue valueWithCGPoint:CGPointMake(xPoint, yPoint)]];
-        _t += (step/10.0);
+        _t += (step);
         
     }
-//    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-//    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
-//    imgView.backgroundColor = [UIColor clearColor];
-//    UIGraphicsEndImageContext();
-    
-//    [self addSubview:imgView];
     _data.points = points;
     [self.delegate parserDidFinishParseFORStmtWithData:_data];
     NSLog(@"forDone");
@@ -332,21 +326,6 @@
     ExprNode *node = [ExprNode new];
     node.tokenType = tokenType;
     node.content = content;
-    //    switch (tokenType){
-    //        case CONST_ID:
-    //            node.content = [@{@"value": dic[@"value"]} mutableCopy];
-    //            break;
-    //        case FUNC:
-    //            node.content = [@{@"value": dic[@"value"]} mutableCopy];
-    //            break;
-    //        case T:
-    //            node.content = [@{@"value": _t} mutableCopy];
-    //            break;
-    //        default:
-    //            node.content = [@{@"left": dic[@"left"],
-    //                             @"right": dic[@"right"]} mutableCopy];
-    //            break;
-    //    }
     return node;
 }
 

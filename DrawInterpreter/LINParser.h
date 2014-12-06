@@ -21,6 +21,7 @@ typedef struct ForStmtData{
 @protocol LINParserDelegate <NSObject>
 
 - (void)parserDidFinishParseFORStmtWithData:(ForStmtData)data;
+- (void)parserDidFailedWithString:(NSString *)errorString;
 
 @end
 
